@@ -1,7 +1,13 @@
-This was an exploration in using two different APIs. by doing something I found useful for myself.
-The first, was OpenWeather's API, to get a forecast for the day, and save the temperatures and weather conditions in 3 hour increments.
-Second, I used Twilio's API to send the forecast information to myself as a WhatsApp message. I left the SMS code as well if preferred.
+# Weather Forecast WhatsApp Notifier
 
-I had some issues with getting the correct time. I was sending the hours from OpenWeather's timezone at first. 
-But I managed to fix it by accessing a different variable and converting using datetime.fromtimestamp().
-Not entirely sure it is properly converting, as I'd need to run this code from a different timezone to be certain.
+## Description
+This Python script retrieves weather forecast data from the OpenWeatherMap API and sends a WhatsApp message with the forecast. It tells the weather for the next 18 hours, in 3-hour increments, sending temperatures in Celsius and weather conditions.
+
+## Installation
+1. Clone the repository.
+2. Install the required Python packages using `pip install -r requirements.txt`.
+3. Set up environment variables for your OpenWeatherMap API key, Twilio auth token, Twilio phone number, and your phone number.
+
+## Usage
+Run the `main()` function in the script to get the weather forecast and send it via WhatsApp.
+There is no loop to keep the script running as I use the PythonAnywhere service to run it every day at a specific time.
